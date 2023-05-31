@@ -1,15 +1,15 @@
-const openMenu = () => {
+const openMenuButton = () => {
   const menu = document.getElementById('nav');
   menu.style.display = 'block';
 };
 
-function closeMenu() {
+function closeMenuButton() {
   const menu = document.getElementById('nav');
   menu.style.display = 'none';
 }
 
-openMenu();
-closeMenu();
+openMenuButton();
+closeMenuButton();
 
 // OBJECT FOR STORING PROJECT DATA
 const dataSpeakers = [
@@ -51,23 +51,23 @@ const dataSpeakers = [
   },
 ];
 
-const sectionSpeakers = document.querySelector('#speakers');
+const speakersSection = document.querySelector('#speakers');
 const h2 = document.createElement('h2');
 h2.textContent = 'Features Speakers';
-sectionSpeakers.appendChild(h2);
+speakersSection.appendChild(h2);
 
 const line2 = document.createElement('div');
 line2.classList.add('line2');
-sectionSpeakers.appendChild(line2);
+speakersSection.appendChild(line2);
 
-const speakContainer = document.createElement('div');
-speakContainer.classList.add('speakContainer');
-sectionSpeakers.appendChild(speakContainer);
+const speakersContainer = document.createElement('div');
+speakersContainer.classList.add('speakContainer');
+speakersSection.appendChild(speakersContainer);
 
 dataSpeakers.map((dataSpeak, i) => {
   const speakCard = document.createElement('div');
   speakCard.classList.add('speakCard');
-  speakContainer.appendChild(speakCard);
+  speakersContainer.appendChild(speakCard);
 
   const imgCard = document.createElement('img');
   imgCard.classList.add('imgCard');
@@ -104,4 +104,4 @@ const hideButton = document.createElement('button');
 hideButton.classList.add('hideButton');
 hideButton.textContent = 'More  ▽';
 hideButton.type = 'button';
-speakContainer.appendChild(hideButton);
+speakersContainer.appendChild(hideButton);
